@@ -11,17 +11,20 @@
     --Azul: #3897F0;
 }
 body {
-    font-family: 'Open Sans', sans-serif
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--Bg)
 }
 
 .header{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     height: 70px;
+    background-color: var(--Blanco);
+    border-bottom: 1px solid var(--Gris);
 }
 
 
 .containerHeader{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     max-width: 1000px;
     height: 100%;
     padding: 0 1em;
@@ -47,8 +50,83 @@ body {
 }
 
 .containerHeader nav a{
-    margin: 0 .5em;
+    margin: 0 0 0 .5em;
     font-size: 24px;
     text-decoration: none;
     color: black;
 }
+
+/* Aquí comienza el contenido */
+
+/* Aquí comienza la sección 1 */
+.containerContent{
+    /* border: 1px solid blue; */
+    max-width: 1000px;
+    height: 100%;
+    padding: 1em 1em;
+    margin: 0 auto;
+}
+
+.section1{
+    /* border: 1px solid red; */
+    margin: 1em 0;
+}
+    .section1 h2{
+        border-bottom: 2px solid var(--Gris);
+        color: var(--Negro);
+    }
+
+.containerItems{
+    display: grid;
+    grid-template: 1fr / repeat(auto-fill, minmax(250px, 300px));
+    justify-content: center;
+    /* border: 1px solid blue; */
+    padding: 1em 0;
+    grid-gap: 1em;
+}
+    .containerItems .item{
+        /* border: 1px solid red; */
+        border-radius: 15px;
+        display: block;
+        overflow: hidden;
+        box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    }
+
+    .item .itemContent{
+        display: grid;
+        grid-template: repeat(6, 1fr) / repeat(6, 1fr);
+    }
+
+    .itemContent figure{
+        width: 100%;
+        height: 100%;
+    }
+    .itemContent figure img{
+        height: 100%;
+        width: 100%;
+    }
+
+    .itemContent .title{
+        grid-column: 1 / span 6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--Blanco);
+        border-bottom: 1px solid var(--Gris);
+    }
+        .itemContent .title h3{
+            color: var(--Negro);
+        }
+    .itemContent .footer{
+        grid-column: 1 / span 6;
+        grid-row-start: 6;
+        background-color: var(--Blanco);
+        border-top: 1px solid var(--Gris);
+    }
+    .itemContent figure{
+        grid-row-start: 2;
+        grid-row-end: 6;
+        grid-column-start: 1;
+        grid-column-end: 7;
+    }
+/* Aquí finaliza la sección 1 */
