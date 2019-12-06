@@ -70,6 +70,7 @@ body {
     height: 100%;
     padding: 1em 1em;
     margin: 0 auto;
+    margin-top: 70px;
 }
 
 .section1{
@@ -79,6 +80,7 @@ body {
     .section1 h2{
         border-bottom: 2px solid var(--Gris);
         color: var(--Negro);
+        text-transform: uppercase;
     }
 
 .containerItems{
